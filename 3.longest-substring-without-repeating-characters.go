@@ -4,19 +4,23 @@
  * [3] Longest Substring Without Repeating Characters
  */
 func lengthOfLongestSubstring(s string) int {
-	var cache map[byte]interface{}
-	var result int
-	for i := 0; i < len(s); i++ {
-		cache = make(map[byte]interface{})
-		var j = i
+	cache := make(map[byte]byte)
+	var result, longest int
+	var i int
+	j := i
+	for ; i < len(s); i++ {
+		if result > 0 {
+			j = longest + i - 1
+			delete(cache, s[i-1])
+		}
 		for ; j < len(s); j++ {
 			if _, ok := cache[s[j]]; ok {
 				break
 			} else {
-				cache[s[j]] = struct{}{}
+				cache[s[j]] = s[j]
 			}
 		}
-		longest := j - i
+		longest = j - i
 		if longest > result {
 			result = longest
 		}
