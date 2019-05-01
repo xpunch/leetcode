@@ -22,7 +22,7 @@ My leetcode answers
 3.longest-substring-without-repeating-characters
 ```
 √ Accepted
-  √ 987/987 cases passed (124 ms)
-  √ Your runtime beats 24.63 % of golang submissions
-  √ Your memory usage beats 20.85 % of golang submissions (4.7 MB)
+  √ 987/987 cases passed (8 ms)
+  √ Your runtime beats 84.94 % of golang submissions
+  √ Your memory usage beats 49.12 % of golang submissions (3.1 MB)
 ```
