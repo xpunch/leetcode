@@ -34,3 +34,11 @@ My leetcode answers
   √ Your runtime beats 97.1 % of golang submissions
   √ Your memory usage beats 98.19 % of golang submissions (5.4 MB)
 ```
+
+5. longest-palindromic-substring
+```
+√ Accepted
+  √ 103/103 cases passed (72 ms)
+  √ Your runtime beats 34.83 % of golang submissions
+  √ Your memory usage beats 63.97 % of golang submissions (2.3 MB)
+```
