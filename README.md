@@ -50,3 +50,11 @@ My leetcode answers
   √ Your runtime beats 60.44 % of golang submissions
   √ Your memory usage beats 70.09 % of golang submissions (4.4 MB)
 ```
+
+7. reverse-integer
+```
+√ Accepted
+  √ 1032/1032 cases passed (0 ms)
+  √ Your runtime beats 100 % of golang submissions
+  √ Your memory usage beats 23.38 % of golang submissions (2.2 MB)
+```
