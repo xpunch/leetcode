@@ -42,3 +42,11 @@ My leetcode answers
   √ Your runtime beats 34.83 % of golang submissions
   √ Your memory usage beats 63.97 % of golang submissions (2.3 MB)
 ```
+
+6. zig-zag-conversion
+```
+√ Accepted
+  √ 1158/1158 cases passed (12 ms)
+  √ Your runtime beats 60.44 % of golang submissions
+  √ Your memory usage beats 70.09 % of golang submissions (4.4 MB)
+```
