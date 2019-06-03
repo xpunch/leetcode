@@ -58,3 +58,11 @@ My leetcode answers
   √ Your runtime beats 100 % of golang submissions
   √ Your memory usage beats 23.38 % of golang submissions (2.2 MB)
 ```
+
+8. string-to-integer-atoi
+```
+√ Accepted
+  √ 1079/1079 cases passed (0 ms)
+  √ Your runtime beats 100 % of golang submissions
+  √ Your memory usage beats 33.69 % of golang submissions (2.3 MB)
+```
