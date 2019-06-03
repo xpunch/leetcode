@@ -66,3 +66,11 @@ My leetcode answers
   √ Your runtime beats 100 % of golang submissions
   √ Your memory usage beats 33.69 % of golang submissions (2.3 MB)
 ```
+
+9. palindrome-number
+```
+√ Accepted
+  √ 11509/11509 cases passed (20 ms)
+  √ Your runtime beats 86.5 % of golang submissions
+  √ Your memory usage beats 32.17 % of golang submissions (5.2 MB)
+```
