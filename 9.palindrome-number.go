@@ -1,6 +1,4 @@
-import (
-	"strconv"
-)
+package main
 
 /*
  * @lc app=leetcode id=9 lang=golang
@@ -11,9 +9,13 @@ func isPalindrome(x int) bool {
 	if x < 0 {
 		return false
 	}
-	str := strconv.Itoa(x)
-	for i := 0; i < len(str)/2; i++ {
-		if str[i] != str[len(str)-i-1] {
+	buf := make([]byte, 0)
+	for x > 0 {
+		buf = append(buf, byte(x%10))
+		x = x / 10
+	}
+	for i := 0; i < len(buf)/2; i++ {
+		if buf[i] != buf[len(buf)-i-1] {
 			return false
 		}
 	}

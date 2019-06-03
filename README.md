@@ -70,7 +70,7 @@ My leetcode answers
 9. palindrome-number
 ```
 √ Accepted
-  √ 11509/11509 cases passed (20 ms)
-  √ Your runtime beats 86.5 % of golang submissions
-  √ Your memory usage beats 32.17 % of golang submissions (5.2 MB)
+  √ 11509/11509 cases passed (16 ms)
+  √ Your runtime beats 92.02 % of golang submissions
+  √ Your memory usage beats 20.32 % of golang submissions (5.3 MB)
 ```
