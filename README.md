@@ -82,7 +82,7 @@ My leetcode answers
 13. roman-to-integer
 ```
 √ Accepted
-  √ 3999/3999 cases passed (4 ms)
-  √ Your runtime beats 96.49 % of golang submissions
+  √ 3999/3999 cases passed (0 ms)
+  √ Your runtime beats 100 % of golang submissions
   √ Your memory usage beats 51.63 % of golang submissions (3 MB)
 ```

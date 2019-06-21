@@ -4,52 +4,51 @@
  * [13] Roman to Integer
  */
 func romanToInt(s string) int {
-	maps := map[byte]int{
-		'I': 1,
-		'V': 5,
-		'X': 10,
-		'L': 50,
-		'C': 100,
-		'D': 500,
-		'M': 1000,
-	}
 	var value int
 	for i := 0; i < len(s); i++ {
-		c := s[i]
-		v, ok := maps[c]
-		if !ok {
+		var v int
+		switch s[i] {
+		case 'I':
+			v = 1
+		case 'V':
+			v = 5
+		case 'X':
+			v = 10
+		case 'L':
+			v = 50
+		case 'C':
+			v = 100
+		case 'D':
+			v = 500
+		case 'M':
+			v = 1000
+		default:
 			return 0
 		}
 		if i != len(s)-1 {
-			big := s[i+1]
-			switch c {
-			case 'I':
-				if big == 'V' {
-					v = 4
-					i++
-				} else if big == 'X' {
-					v = 9
-					i++
-				}
+			switch s[i : i+2] {
+			case "IV":
+				v = 4
+				i++
 				break
-			case 'X':
-				if big == 'L' {
-					i++
-					v = 40
-				} else if big == 'C' {
-					v = 90
-					i++
-				}
+			case "IX":
+				v = 9
+				i++
 				break
-			case 'C':
-				if big == 'D' {
-					v = 400
-					i++
-				} else if big == 'M' {
-					v = 900
-					i++
-				}
+			case "XL":
+				v = 40
+				i++
 				break
+			case "XC":
+				v = 90
+				i++
+				break
+			case "CD":
+				v = 400
+				i++
+			case "CM":
+				v = 900
+				i++
 			}
 		}
 		value += v
