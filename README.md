@@ -74,3 +74,15 @@ My leetcode answers
   √ Your runtime beats 92.02 % of golang submissions
   √ Your memory usage beats 20.32 % of golang submissions (5.3 MB)
 ```
+
+10. regular-expression-matching
+```
+```
+
+13. roman-to-integer
+```
+√ Accepted
+  √ 3999/3999 cases passed (4 ms)
+  √ Your runtime beats 96.49 % of golang submissions
+  √ Your memory usage beats 51.63 % of golang submissions (3 MB)
+```
