@@ -86,3 +86,11 @@ My leetcode answers
   √ Your runtime beats 100 % of golang submissions
   √ Your memory usage beats 51.63 % of golang submissions (3 MB)
 ```
+
+14. longest-common-prefix
+```
+√ Accepted
+  √ 118/118 cases passed (0 ms)
+  √ Your runtime beats 100 % of golang submissions
+  √ Your memory usage beats 69.31 % of golang submissions (2.4 MB)
+```
