@@ -6,28 +6,20 @@ package main
  * [11] Container With Most Water
  */
 func maxArea(height []int) int {
-	var max int
-	for i := 0; i < len(height); i++ {
-		for j := i + 1; j < len(height); j++ {
-			tmp := (j - i) * min(height[i], height[j])
-			if tmp > max {
-				max = tmp
-			}
+	var left, right, max int
+	right = len(height) - 1
+	for left < right {
+		var tmp int
+		if height[left] < height[right] {
+			tmp = height[left] * (right - left)
+			left++
+		} else {
+			tmp = height[right] * (right - left)
+			right--
+		}
+		if tmp > max {
+			max = tmp
 		}
 	}
 	return max
-}
-
-func abs(v int) int {
-	if v < 0 {
-		return -v
-	}
-	return v
-}
-
-func min(s int, t int) int {
-	if s < t {
-		return s
-	}
-	return t
 }
