@@ -1,6 +1,12 @@
 # leetcode
 My leetcode answers
 
+# Test
+```
+go test -timeout 1s
+go test -timeout 1s -run Method
+```
+
 # Result
 
 1. two-sum
@@ -77,6 +83,10 @@ My leetcode answers
 
 10. regular-expression-matching
 ```
+√ Accepted
+  √ 447/447 cases passed (0 ms)
+  √ Your runtime beats 100 % of golang submissions
+  √ Your memory usage beats 57.2 % of golang submissions (2.2 MB)
 ```
 
 13. roman-to-integer
