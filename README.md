@@ -97,6 +97,14 @@ go test -timeout 1s -run Method
   √ Your memory usage beats 71.98 % of golang submissions (5.6 MB)
 ```
 
+12. integer-to-roman
+```
+√ Accepted
+  √ 3999/3999 cases passed (4 ms)
+  √ Your runtime beats 97.9 % of golang submissions
+  √ Your memory usage beats 27.64 % of golang submissions (3.4 MB)
+```
+
 13. roman-to-integer
 ```
 √ Accepted
