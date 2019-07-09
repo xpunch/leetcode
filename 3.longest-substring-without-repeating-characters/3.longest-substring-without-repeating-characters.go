@@ -7,7 +7,7 @@ func lengthOfLongestSubstring(s string) int {
 	cache := make(map[byte]int)
 	var result, longest int
 	var i int
-	for j, c := range []byte(s {
+	for j, c := range []byte(s) {
 		if x, ok := cache[c]; ok && x >= i {
 			i = x + 1
 		}
