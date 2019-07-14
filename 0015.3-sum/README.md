@@ -24,3 +24,11 @@ A solution set is:
   [-1, -1, 2]
 ]
 ```
+
+Result
+```
+√ Accepted
+  √ 313/313 cases passed (940 ms)
+  √ Your runtime beats 36.37 % of golang submissions
+  √ Your memory usage beats 52.28 % of golang submissions (293.1 MB)
+```
