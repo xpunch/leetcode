@@ -20,10 +20,18 @@ Output: 7 -> 0 -> 8
 Explanation: 342 + 465 = 807.
 ```
 
-## Result
+## Go
 ```
 √ Accepted
   √ 1563/1563 cases passed (12 ms)
   √ Your runtime beats 100 % of golang submissions
   √ Your memory usage beats 83.89 % of golang submissions (4.9 MB)
+```
+
+## Python
+```
+√ Accepted
+  √ 1563/1563 cases passed (72 ms)
+  √ Your runtime beats 91.82 % of python3 submissions
+  √ Your memory usage beats 99.59 % of python3 submissions (12.7 MB)
 ```
