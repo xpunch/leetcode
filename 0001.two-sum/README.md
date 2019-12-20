@@ -20,10 +20,18 @@ Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
 ```
 
-## Result:
+## Go:
 ```
 √ Accepted
   √ 29/29 cases passed (4 ms)
   √ Your runtime beats 100 % of golang submissions
   √ Your memory usage beats 51.62 % of golang submissions (3.7 MB)
+```
+
+## Python:
+```
+√ Accepted
+  √ 29/29 cases passed (88 ms)
+  √ Your runtime beats 51.55 % of python3 submissions
+  √ Your memory usage beats 48.39 % of python3 submissions (14.2 MB)
 ```
