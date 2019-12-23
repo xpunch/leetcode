@@ -30,10 +30,18 @@ Output: 3
 Explanation: The answer is "wke", with the length of 3.
              Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
 ```
-## Result
+## Go
 ```
 √ Accepted
   √ 987/987 cases passed (8 ms)
   √ Your runtime beats 84.94 % of golang submissions
   √ Your memory usage beats 49.12 % of golang submissions (3.1 MB)
-``` 
+```
+
+## Python
+```
+√ Accepted
+  √ 987/987 cases passed (52 ms)
+  √ Your runtime beats 92.15 % of python3 submissions
+  √ Your memory usage beats 100 % of python3 submissions (12.9 MB)
+```
