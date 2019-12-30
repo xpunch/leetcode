@@ -25,12 +25,12 @@ func BenchmarkCocktailShakerSort(b *testing.B) {
 	}
 }
 
-func BenchmarkCombSort(b *testing.B) {
+func BenchmarkOddEvenSort(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		b.StopTimer()
 		arr := RandomArray(ArraySize)
 		b.StartTimer()
-		combSort(arr)
+		oddEvenSort(arr)
 	}
 }
 
@@ -52,6 +52,15 @@ func BenchmarkSelectionSort(b *testing.B) {
 	}
 }
 
+func BenchmarkHeapSort(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		b.StopTimer()
+		arr := RandomArray(ArraySize)
+		b.StartTimer()
+		heapSort(arr)
+	}
+}
+
 func BenchmarkMergeSort(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		b.StopTimer()
@@ -67,5 +76,14 @@ func BenchmarkQuickSort(b *testing.B) {
 		arr := RandomArray(ArraySize)
 		b.StartTimer()
 		quickSort(arr)
+	}
+}
+
+func BenchmarkCombSort(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		b.StopTimer()
+		arr := RandomArray(ArraySize)
+		b.StartTimer()
+		combSort(arr)
 	}
 }

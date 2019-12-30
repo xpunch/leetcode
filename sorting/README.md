@@ -15,22 +15,26 @@ BenchmarkBubbleSort-4                     639403               271 ns/op        
 BenchmarkCombSort-4                      1000000               236 ns/op               0 B/op          0 allocs/op
 
 100
-BenchmarkBubbleSort-4                     146353              8742 ns/op               0 B/op          0 allocs/op
-BenchmarkCocktailShakerSort-4             134820              9766 ns/op               0 B/op          0 allocs/op
-BenchmarkSelectionSort-4                  141255              8057 ns/op               0 B/op          0 allocs/op
-BenchmarkMergeSort-4                      150060              7881 ns/op            5824 B/op         99 allocs/op
-BenchmarkGnomeSort-4                      157920              6739 ns/op               0 B/op          0 allocs/op
-BenchmarkQuickSort-4                      282315              4637 ns/op               0 B/op          0 allocs/op
-BenchmarkCombSort-4                       413973              4092 ns/op               0 B/op          0 allocs/op
+BenchmarkBubbleSort-4                     123136              9679 ns/op               0 B/op          0 allocs/op
+BenchmarkCocktailShakerSort-4             121542              9602 ns/op               0 B/op          0 allocs/op
+BenchmarkOddEvenSort-4                    117151              9615 ns/op               0 B/op          0 allocs/op
+BenchmarkCombSort-4                       253772              4102 ns/op               0 B/op          0 allocs/op
+BenchmarkGnomeSort-4                      146133              6984 ns/op               0 B/op          0 allocs/op
+BenchmarkSelectionSort-4                  154164              7501 ns/op               0 B/op          0 allocs/op
+BenchmarkMergeSort-4                      158782              8441 ns/op            5824 B/op         99 allocs/op
+BenchmarkQuickSort-4                      234450              4625 ns/op               0 B/op          0 allocs/op
+BenchmarkHeapSort-4                       138548              8372 ns/op               0 B/op          0 allocs/op
 
 1000
-BenchmarkBubbleSort-4                       1304            770025 ns/op               0 B/op          0 allocs/op
-BenchmarkCocktailShakerSort-4               1261            903892 ns/op               0 B/op          0 allocs/op
-BenchmarkGnomeSort-4                        1713            707955 ns/op               0 B/op          0 allocs/op
-BenchmarkSelectionSort-4                    2055            568802 ns/op               0 B/op          0 allocs/op
-BenchmarkMergeSort-4                       12164            125558 ns/op           81536 B/op        999 allocs/op
-BenchmarkQuickSort-4                       20682             60067 ns/op               0 B/op          0 allocs/op
-BenchmarkCombSort-4                        21500             50499 ns/op               0 B/op          0 allocs/op
+BenchmarkBubbleSort-4                       1686            762850 ns/op               0 B/op          0 allocs/op
+BenchmarkCocktailShakerSort-4               1471            703005 ns/op               1 B/op          0 allocs/op
+BenchmarkOddEvenSort-4                      1629            678369 ns/op               0 B/op          0 allocs/op
+BenchmarkGnomeSort-4                        2253            537690 ns/op               0 B/op          0 allocs/op
+BenchmarkHeapSort-4                         2374            516721 ns/op               0 B/op          0 allocs/op
+BenchmarkSelectionSort-4                    2098            503662 ns/op               0 B/op          0 allocs/op
+BenchmarkMergeSort-4                       10000            104592 ns/op           81536 B/op        999 allocs/op
+BenchmarkCombSort-4                        17697             68867 ns/op               0 B/op          0 allocs/op
+BenchmarkQuickSort-4                       20517             56795 ns/op               0 B/op          0 allocs/op
 
 10000
 BenchmarkBubbleSort-4                        100         110736128 ns/op               3 B/op          0 allocs/op

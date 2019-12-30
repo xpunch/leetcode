@@ -97,6 +97,34 @@ func TestQuickSort(t *testing.T) {
 	}
 }
 
+func TestOddEvenSort(t *testing.T) {
+	input := RandomArray(1000)
+	output := oddEvenSort(input)
+	if len(input) != len(output) {
+		t.FailNow()
+	}
+	for i := 1; i < len(output); i++ {
+		if output[i] < output[i-1] {
+			t.FailNow()
+		}
+	}
+}
+
+func TestHeapSort(t *testing.T) {
+	for i := 0; i < 10; i++ {
+		input := RandomArray(10)
+		output := heapSort(input)
+		if len(input) != len(output) {
+			t.FailNow()
+		}
+		for i := 1; i < len(output); i++ {
+			if output[i] < output[i-1] {
+				t.FailNow()
+			}
+		}
+	}
+}
+
 func RandomArray(n int) []int {
 	// needed a seed input else it will generate the same number
 	rand.Seed(time.Now().UnixNano())
