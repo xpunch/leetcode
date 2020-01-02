@@ -61,6 +61,15 @@ func BenchmarkHeapSort(b *testing.B) {
 	}
 }
 
+func BenchmarkInsertionSort(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		b.StopTimer()
+		arr := RandomArray(ArraySize)
+		b.StartTimer()
+		insertionSort(arr)
+	}
+}
+
 func BenchmarkMergeSort(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		b.StopTimer()
