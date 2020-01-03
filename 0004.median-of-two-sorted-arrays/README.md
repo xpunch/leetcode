@@ -39,7 +39,7 @@ The median is (2 + 3)/2 = 2.5
 ## Python
 ```
 √ Accepted
-  √ 2085/2085 cases passed (96 ms)
-  √ Your runtime beats 64.23 % of python3 submissions
-  √ Your memory usage beats 100 % of python3 submissions (12.7 MB)
+  √ 2085/2085 cases passed (88 ms)
+  √ Your runtime beats 92.73 % of python3 submissions
+  √ Your memory usage beats 100 % of python3 submissions (12.9 MB)
 ```
