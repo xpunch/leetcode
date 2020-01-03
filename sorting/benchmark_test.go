@@ -79,12 +79,12 @@ func BenchmarkMergeSort(b *testing.B) {
 	}
 }
 
-func BenchmarkQuickSort(b *testing.B) {
+func BenchmarkShellSort(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		b.StopTimer()
 		arr := RandomArray(ArraySize)
 		b.StartTimer()
-		quickSort(arr)
+		shellSort(arr)
 	}
 }
 
@@ -94,5 +94,23 @@ func BenchmarkCombSort(b *testing.B) {
 		arr := RandomArray(ArraySize)
 		b.StartTimer()
 		combSort(arr)
+	}
+}
+
+func BenchmarkCountingSort(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		b.StopTimer()
+		arr := RandomArray(ArraySize)
+		b.StartTimer()
+		countingSort(arr)
+	}
+}
+
+func BenchmarkQuickSort(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		b.StopTimer()
+		arr := RandomArray(ArraySize)
+		b.StartTimer()
+		quickSort(arr)
 	}
 }

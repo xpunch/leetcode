@@ -111,9 +111,26 @@ func TestOddEvenSort(t *testing.T) {
 }
 
 func TestHeapSort(t *testing.T) {
-	for i := 0; i < 10; i++ {
-		input := RandomArray(10)
-		output := heapSort(input)
+	for c := 0; c < 1000; c++ {
+		for i := 0; i < 10; i++ {
+			input := RandomArray(10)
+			output := heapSort(input)
+			if len(input) != len(output) {
+				t.FailNow()
+			}
+			for i := 1; i < len(output); i++ {
+				if output[i] < output[i-1] {
+					t.FailNow()
+				}
+			}
+		}
+	}
+}
+
+func TestInsertionSort(t *testing.T) {
+	for c := 0; c < 1000; c++ {
+		input := RandomArray(1000)
+		output := insertionSort(input)
 		if len(input) != len(output) {
 			t.FailNow()
 		}
@@ -125,15 +142,32 @@ func TestHeapSort(t *testing.T) {
 	}
 }
 
-func TestInsertionSort(t *testing.T) {
-	input := RandomArray(1000)
-	output := insertionSort(input)
-	if len(input) != len(output) {
-		t.FailNow()
-	}
-	for i := 1; i < len(output); i++ {
-		if output[i] < output[i-1] {
+func TestShellSort(t *testing.T) {
+	for c := 0; c < 1000; c++ {
+		input := RandomArray(1000)
+		output := shellSort(input)
+		if len(input) != len(output) {
 			t.FailNow()
+		}
+		for i := 1; i < len(output); i++ {
+			if output[i] < output[i-1] {
+				t.FailNow()
+			}
+		}
+	}
+}
+
+func TestCountingSort(t *testing.T) {
+	for c := 0; c < 1000; c++ {
+		input := RandomArray(1000)
+		output := countingSort(input)
+		if len(input) != len(output) {
+			t.FailNow()
+		}
+		for i := 1; i < len(output); i++ {
+			if output[i] < output[i-1] {
+				t.FailNow()
+			}
 		}
 	}
 }
@@ -144,7 +178,7 @@ func RandomArray(n int) []int {
 
 	arr := make([]int, n)
 	for i := 0; i <= n-1; i++ {
-		arr[i] = rand.Intn(n*2) - n
+		arr[i] = rand.Intn(n)
 	}
 	return arr
 }
