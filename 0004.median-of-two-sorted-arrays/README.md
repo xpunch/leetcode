@@ -28,10 +28,18 @@ nums2 = [3, 4]
 The median is (2 + 3)/2 = 2.5
 ```
 
-## Result
+## Go
 ```
 √ Accepted
   √ 2084/2084 cases passed (16 ms)
   √ Your runtime beats 97.1 % of golang submissions
   √ Your memory usage beats 98.19 % of golang submissions (5.4 MB)
+```
+
+## Python
+```
+√ Accepted
+  √ 2085/2085 cases passed (96 ms)
+  √ Your runtime beats 64.23 % of python3 submissions
+  √ Your memory usage beats 100 % of python3 submissions (12.7 MB)
 ```
