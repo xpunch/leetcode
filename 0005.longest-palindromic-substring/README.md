@@ -23,10 +23,18 @@ Input: "cbbd"
 Output: "bb"
 ```
 
-## Result
+## Go
 ```
 √ Accepted
-  √ 103/103 cases passed (72 ms)
-  √ Your runtime beats 34.83 % of golang submissions
-  √ Your memory usage beats 63.97 % of golang submissions (2.3 MB)
+  √ 103/103 cases passed (36 ms)
+  √ Your runtime beats 47.43 % of golang submissions
+  √ Your memory usage beats 9.09 % of golang submissions (6.6 MB)
+```
+
+## Python
+```
+√ Accepted
+  √ 103/103 cases passed (3748 ms)
+  √ Your runtime beats 34.44 % of python3 submissions
+  √ Your memory usage beats 9.25 % of python3 submissions (21.5 MB)
 ```

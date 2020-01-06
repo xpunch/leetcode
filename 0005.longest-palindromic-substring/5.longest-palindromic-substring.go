@@ -7,43 +7,24 @@ package main
  */
 func longestPalindrome(s string) string {
 	n := len(s)
-	if n == 0 {
+	if n < 2 {
 		return s
 	}
-	var ml, mr, l, r int
-	for r = n - 1; l < r; {
-		for r > l {
-			var c int
-			match := false
-			padding := 0
-			if (r-l)%2 == 0 {
-				c = (l + r + 1) / 2
-			} else {
-				c = (r + l) / 2
-				padding = 1
-			}
-			for i := 1; c-i+padding >= l && c+i <= r; i++ {
-				match = true
-				if s[c-i+padding] != s[c+i] {
-					match = false
-					break
+	l, r := 0, 0
+	dp := make([][]bool, n, n)
+	for i := 0; i < n; i++ {
+		dp[i] = make([]bool, n, n)
+	}
+	for j := 1; j <= n-1; j++ {
+		for i := j - 1; i >= 0; i-- {
+			if s[i] == s[j] && (j-i <= 2 || dp[i+1][j-1]) {
+				dp[i][j] = true
+				if j-i > r-l {
+					l = i
+					r = j
 				}
 			}
-			if match && r-l > mr-ml {
-				ml = l
-				mr = r
-				break
-			}
-			r--
-			if r-l < mr-ml {
-				break
-			}
-		}
-		l++
-		r = n - 1
-		if r-l < mr-ml {
-			break
 		}
 	}
-	return s[ml : mr+1]
+	return s[l : r+1]
 }
