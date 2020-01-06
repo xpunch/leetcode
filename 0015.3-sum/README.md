@@ -28,7 +28,7 @@ A solution set is:
 Result
 ```
 √ Accepted
-  √ 313/313 cases passed (940 ms)
-  √ Your runtime beats 36.37 % of golang submissions
-  √ Your memory usage beats 52.28 % of golang submissions (293.1 MB)
+  √ 313/313 cases passed (1136 ms)
+  √ Your runtime beats 19.57 % of golang submissions
+  √ Your memory usage beats 91.67 % of golang submissions (180.3 MB)
 ```
