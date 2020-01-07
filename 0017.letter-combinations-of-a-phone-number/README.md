@@ -28,7 +28,7 @@ Although the above answer is in lexicographical order, your answer could be in a
 ## Python
 ```
 √ Accepted
-  √ 25/25 cases passed (32 ms)
-  √ Your runtime beats 22.22 % of python3 submissions
+  √ 25/25 cases passed (24 ms)
+  √ Your runtime beats 86.81 % of python3 submissions
   √ Your memory usage beats 100 % of python3 submissions (12.7 MB)
 ```
