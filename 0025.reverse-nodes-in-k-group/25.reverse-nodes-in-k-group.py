@@ -36,10 +36,8 @@ class Solution:
         
 
     def reverseList(self, head: ListNode, tail: ListNode) -> ListNode:
-        if head==None or head.next == None or tail == None:
-            return head
         cur = head
-        while cur and cur != tail:
+        while cur != tail:
             tmp = head.next.next
             head.next.next = cur
             cur = head.next

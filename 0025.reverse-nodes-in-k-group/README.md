@@ -32,7 +32,7 @@ You may not alter the values in the list's nodes, only nodes itself may be chang
 ## Python
 ```
 √ Accepted
-  √ 81/81 cases passed (52 ms)
-  √ Your runtime beats 25.89 % of python3 submissions
-  √ Your memory usage beats 100 % of python3 submissions (13.7 MB)
+  √ 81/81 cases passed (44 ms)
+  √ Your runtime beats 82.35 % of python3 submissions
+  √ Your memory usage beats 100 % of python3 submissions (13.6 MB)
 ```
