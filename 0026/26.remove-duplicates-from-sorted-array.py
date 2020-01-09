@@ -13,7 +13,7 @@ class Solution:
         if n <= 1:
             return n
         i = 1
-        while i < n:
+        while i < len(nums):
             if nums[i] != nums[i-1]:
                 i += 1
             else:
