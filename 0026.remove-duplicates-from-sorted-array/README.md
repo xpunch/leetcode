@@ -53,7 +53,7 @@ for (int i = 0; i < len; i++) {
 ## Python
 ```
 √ Accepted
-  √ 161/161 cases passed (96 ms)
-  √ Your runtime beats 37.56 % of python3 submissions
-  √ Your memory usage beats 99.18 % of python3 submissions (14.4 MB)
+  √ 161/161 cases passed (88 ms)
+  √ Your runtime beats 55.72 % of python3 submissions
+  √ Your memory usage beats 100 % of python3 submissions (14.4 MB)
 ```
