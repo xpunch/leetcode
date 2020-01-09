@@ -25,7 +25,7 @@ For example, given n = 3, a solution set is:
 ## Python
 ```
 √ Accepted
-  √ 8/8 cases passed (84 ms)
-  √ Your runtime beats 6.79 % of python3 submissions
-  √ Your memory usage beats 6.67 % of python3 submissions (43.4 MB)
+  √ 8/8 cases passed (28 ms)
+  √ Your runtime beats 89.48 % of python3 submissions
+  √ Your memory usage beats 100 % of python3 submissions (12.8 MB)
 ```
