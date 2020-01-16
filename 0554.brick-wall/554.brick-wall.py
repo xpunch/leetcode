@@ -5,20 +5,19 @@
 #
 
 # @lc code=start
-import copy
+import collections
 
 
 class Solution:
     def leastBricks(self, wall: List[List[int]]) -> int:
-        height = len(wall)
-        edgeCache = {}
+        edges = collections.defaultdict(int)
         count = 0
-        for i in range(height):
+        for line in wall:
             tmp = 0
-            for j in range(len(wall[i])-1):
-                tmp += wall[i][j]
-                edgeCache[tmp] = edgeCache.setdefault(tmp, 0)+1
-                if edgeCache[tmp] > count:
-                    count = edgeCache[tmp]
-        return height - count
+            for brick in line[:-1]:
+                tmp += brick
+                edges[tmp] += 1
+                if edges[tmp] > count:
+                    count = edges[tmp]
+        return len(wall) - count
 # @lc code=end
