@@ -29,7 +29,7 @@ Output:
 ## Python
 ```
 √ Accepted
-  √ 25/25 cases passed (36 ms)
-  √ Your runtime beats 83.09 % of python3 submissions
+  √ 25/25 cases passed (40 ms)
+  √ Your runtime beats 57.23 % of python3 submissions
   √ Your memory usage beats 100 % of python3 submissions (12.8 MB)
 ```

@@ -11,35 +11,24 @@ from typing import List
 
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
-        n, result = len(nums), []
+        n = len(nums)
         if n == 1:
             return [nums]
-        index, indexs, rollback = n-2, [0 for i in range(n)], False
-        while True:
-            if rollback:
-                if indexs[index] < n-index-1:
-                    indexs[index] += 1
-                    index = n-2
-                    rollback = False
-                else:
-                    if index == 0:
-                        break
-                    indexs[index] = 0
-                    index -= 1
-            else:
-                cache, num = nums[:], [0 for i in range(n)]
-                for i in range(n):
-                    num[i] = cache[indexs[i]]
-                    del cache[indexs[i]]
-                result.append(num)
-                if indexs[index] < n-index-1:
-                    indexs[index] += 1
-                else:
-                    if index == 0:
-                        break
-                    rollback = True
-                    for i in range(index, n-1):
-                        indexs[i] = 0
-                    index -= 1
+        index, num, used, result = 0, [0 for i in range(n)], [
+            False for i in range(n)], []
+        self.generate(nums, index, num, used, result)
         return result
+
+    def generate(self, nums: List[int], index: int, num: List[int], used: List[bool], result: List[List[int]]):
+        if index == len(nums):
+            tmp = num[:]
+            result.append(tmp)
+        else:
+            for i in range(len(nums)):
+                if not used[i]:
+                    used[i] = True
+                    num[index] = nums[i]
+                    self.generate(nums, index+1, num, used, result)
+                    used[i] = False
+
 # @lc code=end
