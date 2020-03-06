@@ -29,3 +29,10 @@ If you have figured out the O(n) solution, try coding another solution using the
   √ Your runtime beats 94.54 % of python3 submissions
   √ Your memory usage beats 95.93 % of python3 submissions (13.4 MB)
 ```
+dynamic-programing
+```
+√ Accepted
+  √ 202/202 cases passed (72 ms)
+  √ Your runtime beats 32.91 % of python3 submissions
+  √ Your memory usage beats 69.11 % of python3 submissions (13.6 MB)
+```
