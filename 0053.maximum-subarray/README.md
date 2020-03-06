@@ -36,3 +36,10 @@ dynamic-programing
   √ Your runtime beats 32.91 % of python3 submissions
   √ Your memory usage beats 69.11 % of python3 submissions (13.6 MB)
 ```
+divide and conquer
+```
+√ Accepted
+  √ 202/202 cases passed (96 ms)
+  √ Your runtime beats 10.56 % of python3 submissions
+  √ Your memory usage beats 65.85 % of python3 submissions (13.6 MB)
+```
