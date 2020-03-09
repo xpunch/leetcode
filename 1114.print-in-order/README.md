@@ -1,4 +1,13 @@
 # Print In Order
+|Category|Difficulty|Likes|Dislikes|
+|-|-|-|-|
+|concurrency|Easy (63.64%)|400|58|
+
+## Tags
+concurrency
+
+## Companies
+Unknown
 
 Suppose we have a class:
 ```
