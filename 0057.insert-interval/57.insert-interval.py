@@ -12,34 +12,17 @@ class Solution:
         n = len(intervals)
         if n == 0:
             return [newInterval]
-        left = intervals[0][0]
-        if left > newInterval[1]:
-            intervals.insert(0, newInterval)
-            return intervals
-        if left == newInterval[1]:
-            intervals[0][0] = newInterval[0]
-            return intervals
-        right = intervals[-1][1]
-        if right < newInterval[0]:
-            intervals.append(newInterval)
-            return intervals
-        if right == newInterval[0]:
-            intervals[-1][1] = newInterval[1]
-            return intervals
-        result = []
-        for i in range(n):
-            interval = intervals[i]
-            li, ri = interval[0], interval[1]
-            if ri < newInterval[0]:
-                result.append(interval)
-            elif li > newInterval[1]:
-                result.append(newInterval)
-                result.extend(intervals[i:])
-                break
-            else:
-                newInterval[0] = min(li, newInterval[0])
-                newInterval[1] = max(ri, newInterval[1])
-                if i == n-1:
-                    result.append(newInterval)
+        result, i = [], 0
+        while i < n and intervals[i][1] < newInterval[0]:
+            result.append(intervals[i])
+            i += 1
+        while i < n and intervals[i][0] <= newInterval[1]:
+            newInterval[0] = min(newInterval[0], intervals[i][0])
+            newInterval[1] = max(newInterval[1], intervals[i][1])
+            i += 1
+        result.append(newInterval)
+        while i < n:
+            result.append(intervals[i])
+            i += 1
         return result
 # @lc code=end
