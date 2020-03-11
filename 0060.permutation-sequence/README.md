@@ -40,7 +40,7 @@ Output: "2314"
 # Python
 ```
 √ Accepted
-  √ 200/200 cases passed (2040 ms)
-  √ Your runtime beats 9.59 % of python3 submissions
+  √ 200/200 cases passed (24 ms)
+  √ Your runtime beats 93.23 % of python3 submissions
   √ Your memory usage beats 100 % of python3 submissions (12.7 MB)
 ```

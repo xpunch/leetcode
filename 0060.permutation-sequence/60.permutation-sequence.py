@@ -5,31 +5,25 @@
 #
 
 # @lc code=start
-# 0 0 0
-# 0 1 0
-# 1 0 0
-# 1 1 0
-# 2 0 0
-# 2 1 0
 
 
 class Solution:
     def getPermutation(self, n: int, k: int) -> str:
         if n == 1:
             return "1"
-        result, nums = "", [str(i+1) for i in range(n)]
-        cache, cursor, i = [0 for i in range(n)], n-2, 0
-        while i < k-1:
-            if cache[cursor] < n-cursor-1:
-                i += 1
-                cache[cursor] += 1
-                if cursor < n-2:
-                    cursor = n-2
+        nums = [str(i+1) for i in range(n)]
+        result, factorial = '', 1
+        for i in range(2, n):
+            factorial *= i
+        k = k-1
+        for i in range(n):
+            if i == n-1:
+                result += nums[0]
             else:
-                cache[cursor] = 0
-                cursor -= 1
-        for i in cache:
-            result += nums[i]
-            del nums[i]
+                ki = k // factorial
+                k = k % factorial
+                factorial = factorial//(n-i-1)
+                result += nums[ki]
+                del nums[ki]
         return result
 # @lc code=end
