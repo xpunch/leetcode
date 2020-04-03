@@ -17,36 +17,15 @@ class Solution:
             return False
         if matrix[0][0] > target or matrix[m-1][n-1] < target:
             return False
-        row, l, r = 0, 0, m-1
-        if matrix[l][0] == target or matrix[r][0] == target:
-            return True
-        while l < r:
-            if matrix[r][0] < target:
-                row = r
-                break
-            if r - l == 1:
-                row = l
-                break
-            mid = (l+r)//2
-            if matrix[mid][0] == target:
+        row, l, r = 0, 0, m*n-1
+        while l <= r:
+            mid = l + ((r-l) >> 1)
+            num = matrix[mid//n][mid % n]
+            if num == target:
                 return True
-            elif matrix[mid][0] > target:
-                r = mid
+            elif num > target:
+                r = mid-1
             else:
-                l = mid
-        if n == 1:
-            return False
-        l, r = 1, n-1
-        if matrix[row][l] == target or matrix[row][r] == target:
-            return True
-        while l < r:
-            if r-l <= 1:
-                return False
-            mid = (l+r)//2
-            if matrix[row][mid] == target:
-                return True
-            elif matrix[row][mid] > target:
-                r = mid
-            else:
-                l = mid
+                l = mid+1
+        return False
     # @lc code=end

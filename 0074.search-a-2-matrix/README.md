@@ -38,11 +38,16 @@ target = 13
 Output: false
 ```
 
+## Notes
+```
+Treat matrix as an array, convert 2d into 1d.
+```
+
 ## Submission
 Python
 ```
-√ Accepted
-  √ 136/136 cases passed (64 ms)
-  √ Your runtime beats 79.47 % of python3 submissions
-  √ Your memory usage beats 5.88 % of python3 submissions (15.8 MB)
+  √ Accepted
+  √ 136/136 cases passed (52 ms)
+  √ Your runtime beats 99.65 % of python3 submissions
+  √ Your memory usage beats 5.88 % of python3 submissions (15.9 MB)
 ```
