@@ -12,26 +12,22 @@ func combine(n int, k int) [][]int {
 		return nil
 	}
 	result := make([][]int, 0)
-	nums := make([]int, n)
-	for i := 0; i < n; i++ {
-		nums[i] = i + 1
-	}
-	return permutate(n, k, 0, result, []int{})
+	permutate(n, k, 0, &result, []int{})
+	return result
 }
 
-func permutate(n int, k int, m int, result [][]int, nums []int) [][]int {
+func permutate(n int, k int, m int, result *[][]int, nums []int) {
 	if k == 0 {
 		tmp := make([]int, len(nums))
 		copy(tmp, nums)
-		result = append(result, tmp)
+		*result = append(*result, tmp)
 	} else {
 		for i := m + 1; i <= n; i++ {
-			newNums := nums[:]
-			newNums = append(newNums, i)
-			result = permutate(n, k-1, i, result, newNums)
+			nums = append(nums, i)
+			permutate(n, k-1, i, result, nums)
+			nums = nums[:len(nums)-1]
 		}
 	}
-	return result
 }
 
 // @lc code=end

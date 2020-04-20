@@ -31,7 +31,7 @@ Output:
 Golang
 ```
 √ Accepted
-  √ 27/27 cases passed (28 ms)
-  √ Your runtime beats 22.22 % of golang submissions
-  √ Your memory usage beats 100 % of golang submissions (8.1 MB)
+  √ 27/27 cases passed (24 ms)
+  √ Your runtime beats 36.6 % of golang submissions
+  √ Your memory usage beats 100 % of golang submissions (7.4 MB)
 ```
