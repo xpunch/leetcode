@@ -8,30 +8,22 @@ package main
 
 // @lc code=start
 func largestRectangleArea(heights []int) int {
-	n := len(heights)
+	n, stack := len(heights), make([]int, 0)
 	var result int
-	for i := 0; i < n; i++ {
-		height := heights[i]
-		if height == 0 || (i > 0 && height <= heights[i-1]) {
-			continue
-		}
-		area := height
-		for j := i + 1; j < n; j++ {
-			right := heights[j]
-			if right == 0 {
-				break
+	for i := 0; i <= n; i++ {
+		for len(stack) > 0 && (i == n || heights[stack[len(stack)-1]] >= heights[i]) {
+			height, width := heights[stack[len(stack)-1]], i
+			stack = stack[:len(stack)-1]
+			if len(stack) > 0 {
+				// height may be duplicated
+				width = i - (stack[len(stack)-1] + 1)
 			}
-			if right < height {
-				height = right
-			}
-			tmp := height * (j - i + 1)
-			if tmp > area {
-				area = tmp
+			area := height * width
+			if area > result {
+				result = area
 			}
 		}
-		if area > result {
-			result = area
-		}
+		stack = append(stack, i)
 	}
 	return result
 }
