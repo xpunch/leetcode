@@ -30,9 +30,6 @@ func generateTrees(n int) []*TreeNode {
 	for i := 0; i <= n; i++ {
 		dp[i] = make([][]*TreeNode, n+1)
 	}
-	for i := 1; i <= n; i++ {
-		dp[i][i] = []*TreeNode{{Val: i}}
-	}
 	for s := 1; s <= n; s++ {
 		for i := 1; i <= n-s+1; i++ {
 			var result []*TreeNode
