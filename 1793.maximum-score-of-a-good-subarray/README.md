@@ -47,7 +47,7 @@ Explanation: The optimal subarray is (0, 4) with a score of min(5,5,4,5,4) * (4-
 ## Submission
 ```
 √ Accepted
-  √ 72/72 cases passed (168 ms)
+  √ 72/72 cases passed (160 ms)
   √ Your runtime beats 40 % of golang submissions
-  √ Your memory usage beats 10 % of golang submissions (9.8 MB)
+  √ Your memory usage beats 70 % of golang submissions (8.3 MB)
 ```

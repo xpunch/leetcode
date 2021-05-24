@@ -8,46 +8,34 @@ package xcode
 
 // @lc code=start
 func maximumScore(nums []int, k int) int {
-	n := len(nums)
-	left, right, stack := make([]int, n), make([]int, n), make([]int, 0)
-	for i := 0; i < n; i++ {
-		left[i] = -1
-		for len(stack) > 0 {
-			e := len(stack) - 1
-			if nums[stack[e]] < nums[i] {
-				break
+	result, min, n := nums[k], nums[k], len(nums)
+	for l, r := k, k; l > 0 || r < n-1; {
+		if l == 0 {
+			r++
+			if nums[r] < min {
+				min = nums[r]
 			}
-			left[i] = left[stack[e]]
-			stack = stack[:e]
-		}
-		if left[i] == -1 {
-			left[i] = i
-		}
-		stack = append(stack, i)
-	}
-	stack = make([]int, 0)
-	for i := n - 1; i >= 0; i-- {
-		right[i] = -1
-		for len(stack) > 0 {
-			e := len(stack) - 1
-			if nums[stack[e]] < nums[i] {
-				break
+		} else if r == n-1 {
+			l--
+			if nums[l] < min {
+				min = nums[l]
 			}
-			right[i] = right[stack[e]]
-			stack = stack[:e]
-		}
-		if right[i] == -1 {
-			right[i] = i
-		}
-		stack = append(stack, i)
-	}
-	var result int
-	for i := 0; i < n; i++ {
-		if left[i] <= k && right[i] >= k {
-			tmp := nums[i] * (right[i] - left[i] + 1)
-			if tmp > result {
-				result = tmp
+		} else {
+			if nums[l-1] > nums[r+1] {
+				l--
+				if nums[l] < min {
+					min = nums[l]
+				}
+			} else {
+				r++
+				if nums[r] < min {
+					min = nums[r]
+				}
 			}
+		}
+		tmp := min * (r - l + 1)
+		if tmp > result {
+			result = tmp
 		}
 	}
 	return result
