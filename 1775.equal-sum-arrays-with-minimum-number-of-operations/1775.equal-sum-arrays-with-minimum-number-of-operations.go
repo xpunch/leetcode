@@ -11,64 +11,58 @@ func minOperations(nums1 []int, nums2 []int) int {
 	if len1 > 6*len2 || 6*len1 < len2 {
 		return -1
 	}
-	cache1, cache2 := make([]int, 6), make([]int, 6)
 	sum1, sum2 := 0, 0
 	for i := 0; i < len1; i++ {
 		sum1 += nums1[i]
-		cache1[nums1[i]-1]++
 	}
 	for i := 0; i < len2; i++ {
 		sum2 += nums2[i]
-		cache2[nums2[i]-1]++
 	}
 	if sum1 == sum2 {
 		return 0
 	}
+	var difference int
 	var count int
+	var steps [5]int
 	if sum1 > sum2 {
-		// cache1 for sub: c1
-		// cache2 for add: 5-c1
-		c1, c2 := 5, 0
-		for difference := sum1 - sum2; difference > 0; {
-			if c1 >= 5-c2 {
-				if cache1[c1] == 0 {
-					c1--
-					continue
-				}
-				difference -= c1
-				cache1[c1]--
-			} else {
-				if cache2[c2] == 0 {
-					c2++
-					continue
-				}
-				difference -= 5 - c2
-				cache2[c2]--
+		for _, i := range nums1 {
+			if i == 1 {
+				continue
 			}
-			count++
+			steps[i-2]++
 		}
+		for _, i := range nums2 {
+			if i == 6 {
+				continue
+			}
+			steps[5-i]++
+		}
+		difference = sum1 - sum2
 	} else {
-		// c1 for add: 5-c1
-		// c2 for sub: c2
-		c1, c2 := 0, 5
-		for difference := sum2 - sum1; difference > 0; {
-			if 5-c1 >= c2 {
-				if cache1[c1] == 0 {
-					c1++
-					continue
-				}
-				difference -= 5 - c1
-				cache1[c1]--
-			} else {
-				if cache2[c2] == 0 {
-					c2--
-					continue
-				}
-				difference -= c2
-				cache2[c2]--
+		for _, i := range nums1 {
+			if i == 6 {
+				continue
 			}
-			count++
+			steps[5-i]++
 		}
+		for _, i := range nums2 {
+			if i == 1 {
+				continue
+			}
+			steps[i-2]++
+		}
+		difference = sum2 - sum1
+	}
+	for i := 5; i >= 1; i-- {
+		max := steps[i-1] * i
+		if max > difference {
+			if difference%i == 0 {
+				return count + difference/i
+			}
+			return count + difference/i + 1
+		}
+		count += steps[i-1]
+		difference -= max
 	}
 	return count
 }

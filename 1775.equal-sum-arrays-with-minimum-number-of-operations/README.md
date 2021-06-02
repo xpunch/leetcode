@@ -60,7 +60,7 @@ Explanation: You can make the sums of nums1 and nums2 equal with 3 operations. A
 ## Submission
 ```
 √ Accepted
-  √ 64/64 cases passed (168 ms)
-  √ Your runtime beats 30 % of golang submissions
-  √ Your memory usage beats 25 % of golang submissions (9.5 MB)
+  √ 64/64 cases passed (136 ms)
+  √ Your runtime beats 100 % of golang submissions
+  √ Your memory usage beats 40 % of golang submissions (8.7 MB)
 ```
