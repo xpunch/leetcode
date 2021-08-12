@@ -43,5 +43,5 @@ golang
 √ Accepted
   √ 62/62 cases passed (4 ms)
   √ Your runtime beats 89.9 % of golang submissions
-  √ Your memory usage beats 15.91 % of golang submissions (3.9 MB)
+  √ Your memory usage beats 100 % of golang submissions (3.7 MB)
 ```
