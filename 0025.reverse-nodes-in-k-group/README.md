@@ -36,3 +36,12 @@ You may not alter the values in the list's nodes, only nodes itself may be chang
   √ Your runtime beats 82.35 % of python3 submissions
   √ Your memory usage beats 100 % of python3 submissions (13.6 MB)
 ```
+
+## Submission
+golang
+```
+√ Accepted
+  √ 62/62 cases passed (4 ms)
+  √ Your runtime beats 89.9 % of golang submissions
+  √ Your memory usage beats 15.91 % of golang submissions (3.9 MB)
+```
